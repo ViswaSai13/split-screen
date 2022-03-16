@@ -3,6 +3,8 @@
 :root {
   --hover-width: 98%;
   --other-width: 2%;
+  --hover-width-mob: 80%;
+  --other-width-mob: 20%;
   --font-family: "Fredoka", sans-serif
 }
 
@@ -115,15 +117,6 @@ h2 strong {
   width: var(--other-width);
 }
 
-@media (max-width: 800px) {
-  h1 {
-    font-size: 2rem;
-  }
-  .center{
-    display: none;
-  }
-}
-
 .credit {
   position: absolute;
   bottom: 20px;
@@ -133,8 +126,37 @@ h2 strong {
   border-radius: 8px;
   color: #FAEBD7;
   padding: 0.5rem 1rem;
+  opacity: 0.75;
 }
 
 .credit a {
   color: #87CEFA;
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 2rem;
+  }
+  .center{
+    display: none;
+  }
+  .credit {
+    width: 300px;
+    text-align: center;
+  }
+  .hover-left .left {
+    width: var(--hover-width-mob);
+  }
+
+  .hover-left .right {
+    width: var(--other-width-mob);
+  }
+  
+  .hover-right .right {
+    width: var(--hover-width-mob);
+  }
+  
+  .hover-right .left {
+    width: var(--other-width-mob);
+  }
 }
